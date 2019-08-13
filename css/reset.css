@@ -1,0 +1,60 @@
+/* CSS reset */
+    
+*, :before, :after {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	text-decoration: inherit;
+	font-style: inherit;
+	border: 0 solid transparent;
+	outline: 0 solid transparent;
+	background: transparent none center center no-repeat;
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+  }
+  
+  ul, ol, li {
+	list-style: none;
+  }
+  
+  table {
+	table-layout: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	font-weight: inherit;
+  }
+  
+  label, button, [type=button], [type=submit], [type=reset], a {
+	cursor: pointer;
+  }
+  
+  img {
+	display: block;
+  }
+  .contents {
+		width: 1760px;
+		margin: 0 auto;
+		position: relative;
+	}
+  .ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+	}
+	.blind {
+		position: absolute;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		margin: -1px;
+		width: 1px;
+		height: 1px;
+	}
+
