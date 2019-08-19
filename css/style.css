@@ -2,6 +2,12 @@
     min-width: 1920px;
     height: 100%;
 }
+/* scrollbar */
+::-webkit-scrollbar {width: 8px; height: 12px;  }
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment {display: none; width: 12px;height: 12px; background: url() rgba(0,0,0,.05);}
+::-webkit-scrollbar-thumb {  background: rgba(0,0,0,.1);  }
+
 /* modal */
 .modal {
     position: absolute;
@@ -458,9 +464,182 @@ aside .kakao img {
     position: absolute;
     top: 0;
     left: 0;
+    width: 370px;
     height: 100%;
-    padding: 40px 60px 0 0;
+    padding: 60px 60px 0 0;
     border-right: 1px solid #d8d8d8;
+}
+.fix-area .login-ok .profile-area .profile-info {
+    float: left;
+    margin-left: 25px;
+    font-size: 0.85rem;
+    
+}
+.fix-area .login-ok .profile-area .profile-info .level {
+    position: relative;
+    margin-bottom: 5px;
+    width: 85px;
+    height: 20px;
+    color: #2fb987;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-indent: 40px;
+    border: 1px solid #2fb987;
+    border-radius: 10px;
+    
+}
+.fix-area .login-ok .profile-area .profile-info .level::before {
+    content: 'Lv.4';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 35px;
+    height: 100%;
+    color: #fff;
+    text-indent: 5px;
+    background-color: #2fb987;
+    border-radius: 10px;
+    
+}
+.fix-area .login-ok .profile-area .profile-info p {
+    font-weight: 600;
+    
+}
+.fix-area .login-ok .profile-area .profile-info .point span+span {
+    margin-left: 11px;
+}
+.fix-area .login-ok .profile-area .profile-info .point span {
+    color: #666;
+    font-size: 0.7rem;
+}
+.fix-area .login-ok .profile-area .profile-info .point .orange {
+    margin-left: 7px;
+    color: #fd7e02;
+    font-weight: 600;
+}
+.fix-area .login-ok .profile-area img {
+    float: left;
+    width: 90px;
+    height: 90px;
+    
+}
+.fix-area .login-ok .profile-area .gnb {
+    margin-top: 5px;
+    border-top: 1px solid #dfdfdf;
+    
+}
+.fix-area .login-ok .profile-area .gnb img {
+    float: none;
+    display: inline-block;
+    margin-right: 3px;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    
+}
+.fix-area .login-ok .profile-area .gnb img:nth-of-type(2) {
+    margin-left: 7px;
+    width: 15px;
+    height: 11px;
+    
+}
+.fix-area .login-ok .profile-area .gnb img:nth-of-type(3) {
+    margin-left: 9px;
+    width: 11px;
+    height: 12px;
+    
+}
+.fix-area .login-ok .profile-area .gnb span {
+    color:#666;
+    font-size: 0.7rem;
+    
+}
+.fix-area .login-ok .profile-area button {
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+    color: #666;
+    font-size: 0.9rem;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    
+}
+.fix-area .login-ok .chat-area{
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px 3px rgba(0,13,57,0.1);
+
+}
+.fix-area .login-ok .chat-area .chat-head {
+    padding: 0 40px;
+    width: 100%;
+    height: 90px;
+    background-color: #2fb987;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.fix-area .login-ok .chat-area .chat-head span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 90px;
+}
+.fix-area .login-ok .chat-area .chat-head .view {
+    float: right;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.fix-area .login-ok .chat-area .chat-head .view::before {
+    content: '';
+    display: inline-block;
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/ic_view.png);
+    background-size: cover;
+}
+.fix-area .login-ok .chat-area .chat-mid {
+    padding: 0 10px 0 30px;
+
+}
+.fix-area .login-ok .chat-area .chat-mid ul {
+    height: 300px;
+    overflow-y: scroll;
+}
+.fix-area .login-ok .chat-area .chat-mid li {
+    padding: 7px 0;
+
+}
+.fix-area .login-ok .chat-area .chat-mid li img {
+    float: left;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+
+}
+.fix-area .login-ok .chat-area .chat-mid li p {
+    color: #666;
+    font-size: 0.85rem;
+
+}
+.fix-area .login-ok .chat-area .chat-mid li .title {
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+}
+.fix-area .login-ok .chat-area .chat-bottom {
+    padding: 20px 40px 0;
+    width: 100%;
+    height: 65px;
+    background-color: #f6f6f6;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.fix-area .login-ok .chat-area .chat-bottom button {
+    color: #2fb987;
 }
 .fix-area .login-btn button {
     width: 310px;
