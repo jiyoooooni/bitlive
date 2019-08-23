@@ -1,7 +1,18 @@
 #wrap {
     margin: 0 auto;
-    max-width: 1920px;
+    max-width: 1920;
+    min-width: 1920px;
     height: 100%;
+}
+#file {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
 }
 /* scrollbar */
 ::-webkit-scrollbar {width: 8px; height: 12px;  }
@@ -195,10 +206,13 @@ aside .kakao img {
 /* visual */
 .header-fix {
     position: fixed;
-    width: 1920px;
+    width: 100%;
     height: 100px;
     border-bottom: 1px solid #d8d8d8;
     z-index: 10000;
+}
+.header-fix .contents {
+    width: 100%;
 }
 .header-fix.active {
     background-color: #fff;
@@ -207,7 +221,7 @@ aside .kakao img {
     width: 100%;
     height: 600px;
     background-image: url(../img/visual_bg.png);
-    background-size: 100%;
+    background-size: cover;
 }
 .visual header {
     width: 100%;
@@ -288,7 +302,7 @@ aside .kakao img {
     line-height: 37px;
 }
 .visual header nav .nav-wrap .nav-list+.nav-list {
-    margin-left: 60px;
+    margin-left: 3vw;
 }
 .visual header .notice-area {
     position: absolute;
@@ -595,13 +609,13 @@ aside .kakao img {
     border-radius: 10px;
     
 }
-.fix-area .login-ok .chat-area{
+.fix-area .chat-area{
     margin-top: 50px;
     border-radius: 10px;
     box-shadow: 3px 3px 12px 3px rgba(0,13,57,0.1);
 
 }
-.fix-area .login-ok .chat-area .chat-head {
+.fix-area .chat-area .chat-head {
     padding: 0 40px;
     width: 100%;
     height: 90px;
@@ -610,18 +624,18 @@ aside .kakao img {
     border-top-right-radius: 10px;
 
 }
-.fix-area .login-ok .chat-area .chat-head span {
+.fix-area .chat-area .chat-head span {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 90px;
 }
-.fix-area .login-ok .chat-area .chat-head .view {
+.fix-area .chat-area .chat-head .view {
     float: right;
     font-size: 0.9rem;
     font-weight: 400;
 }
-.fix-area .login-ok .chat-area .chat-head .view::before {
+.fix-area .chat-area .chat-head .view::before {
     content: '';
     display: inline-block;
     margin-right: 5px;
@@ -630,37 +644,37 @@ aside .kakao img {
     background-image: url(../img/ic_view.png);
     background-size: cover;
 }
-.fix-area .login-ok .chat-area .chat-mid {
+.fix-area .chat-area .chat-mid {
     padding: 0 10px 0 30px;
 
 }
-.fix-area .login-ok .chat-area .chat-mid ul {
+.fix-area .chat-area .chat-mid ul {
     height: 300px;
     overflow-y: scroll;
 }
-.fix-area .login-ok .chat-area .chat-mid li {
+.fix-area .chat-area .chat-mid li {
     padding: 7px 0;
 
 }
-.fix-area .login-ok .chat-area .chat-mid li img {
+.fix-area .chat-area .chat-mid li img {
     float: left;
     margin-right: 15px;
     width: 45px;
     height: 45px;
 
 }
-.fix-area .login-ok .chat-area .chat-mid li p {
+.fix-area .chat-area .chat-mid li p {
     color: #666;
     font-size: 0.85rem;
 
 }
-.fix-area .login-ok .chat-area .chat-mid li .title {
+.fix-area .chat-area .chat-mid li .title {
     color: #333;
     font-size: 0.85rem;
     font-weight: 500;
 
 }
-.fix-area .login-ok .chat-area .chat-bottom {
+.fix-area .chat-area .chat-bottom {
     padding: 20px 40px 0;
     width: 100%;
     height: 65px;
@@ -668,7 +682,7 @@ aside .kakao img {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.fix-area .login-ok .chat-area .chat-bottom button {
+.fix-area .chat-area .chat-bottom button {
     color: #2fb987;
 }
 .fix-area .login-btn button {
@@ -815,13 +829,8 @@ aside .kakao img {
     height: 56px;
     font-size: 1rem;
     color: #666;
+    text-align: center;
     border-bottom: 1px solid #d8d8d8;
-}
-.notice-area table .day {
-    text-align: center;
-}
-.notice-area table .view {
-    text-align: center;
 }
 .notice-area table td img {
     float: left;
@@ -832,6 +841,7 @@ aside .kakao img {
 }
 .notice-area table td a {
     display: block;
+    text-align: left;
 }
 .notice-area .write-btn {
     display: block;
@@ -841,6 +851,335 @@ aside .kakao img {
     color: #fff;
     background-color: #2fb987;
     border-radius: 10px;
+}
+/*고객센터 - 공지사항 detail*/
+.notice-detail-area h3 {
+    padding-bottom: 20px;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+.notice-detail-area article {
+    width: 1330px;
+}
+.notice-detail-area .title-area {
+    padding: 15px 30px;
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8;
+}
+.notice-detail-area .title-area p {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.notice-detail-area .title-area img {
+    float: left;
+    margin-right: 15px;
+    width: 26px;
+    height: 26px;
+}
+.notice-detail-area .title-area span {
+    color: #666;
+    font-size: 0.875rem;
+}
+.notice-detail-area .title-area a.name {
+    font-size: 0.875rem;
+    color: #2fb987;
+}
+.notice-detail-area .title-area span.title {
+    margin-left: 30px;
+}
+.notice-detail-area .info-area {
+    padding: 50px 30px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.notice-detail-area .info-area img {
+    margin-bottom: 30px;
+    width: 856px;
+    height: 500px;
+}
+.notice-detail-area .info-area p {
+    font-size: 0.875rem;
+    color: #666;
+}
+.notice-detail-area .comment-area {
+    padding: 30px 30px 0;
+    font-size: 0;
+}
+.notice-detail-area .comment-area .title {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.notice-detail-area .comment-area .title span {
+    margin-left: 20px;
+    font-size: 0.875rem;
+    color: #2fb987;
+}
+.notice-detail-area .comment-area .text-area {
+    position: relative;
+    display: inline-block;
+    width: 1130px;
+}
+.notice-detail-area .comment-area .text-area textarea {
+    width: 100%;
+    height: 65px;
+}
+.notice-detail-area .comment-area .text-area .noresize {
+    resize: none;
+}
+.notice-detail-area .comment-area .text-area .emo {
+    position: absolute;
+    margin-left: 0;
+    left: 20px;
+    bottom: 17px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url(../img/ic_list.png);
+    background-position: -4px -28px;
+}
+.notice-detail-area .comment-area .text-area label {
+    position: absolute;
+    left: 45px;
+    bottom: 17px;
+    display: block;
+    width: 18px;
+    height: 16px;
+    background-image: url(../img/ic_file.png);
+    background-size: cover;
+}
+.notice-detail-area .comment-area button {
+    display: inline-block;
+    margin-left: 10px;
+    width: 126px;
+    height: 130px;
+    font-size: 1.05rem;
+    color: #fff;
+    background-color: #2fb987;
+    vertical-align: bottom;
+}
+.notice-detail-area .chat-area {
+    margin-top: 30px;
+}
+.notice-detail-area .chat-area .chat-list+.chat-list {
+    margin-top: -1px;
+}
+.notice-detail-area .chat-area .chat-list {
+    position: relative;
+    padding: 20px 30px;
+    width: 100%;
+    margin: 0;
+    border-width: 1px 0;
+}
+.notice-detail-area .chat-area .chat-list img {
+    float: left;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+.notice-detail-area .chat-area .chat-list .desc {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+.notice-detail-area .chat-area .chat-list .name {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.notice-detail-area .chat-area .chat-list .day {
+    font-size: 0.7rem;
+    color: #999;
+}
+.notice-detail-area .chat-area .chat-list .btn-area {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 0.812rem;
+    color: #2fb987;
+}
+.notice-detail-area .chat-area .chat-list .delete {
+    margin-left: 5px;
+}
+.notice-detail-area .list-btn-area {
+    text-align: center;
+}
+.notice-detail-area .list-btn {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font-size: 0.93rem;
+    background-color: #aaa;
+    border-radius: 10px;
+}
+/* 고객센터 - 공지사항 글쓰기 */
+.notice-write-area h3 {
+    padding-bottom: 20px;
+    margin: 0;
+    width: 1330px;
+    border-bottom: 1px solid #000;
+}
+.notice-write-area .write-bx {
+    padding: 30px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.notice-write-area .write-bx-in+.write-bx-in {
+    margin-top: 15px;
+}
+.notice-write-area .write-bx .title {
+    float: left;
+    width: 110px;
+    color: #333;
+    font-weight: 600;
+    line-height: 40px;
+    vertical-align: top;
+}
+.notice-write-area .write-bx input[type="text"]{
+    float: left;
+    padding-left: 20px;
+    width: 1150px;
+    height: 40px;
+    color: #666;
+    border: 1px solid #bbb;
+}
+.notice-write-area .write-bx label {
+    float: left;
+    padding: 8px 0;
+    display: block;
+    width: 117px;
+    height: 40px;
+    font-size: 0;
+    text-align: center;
+    background-color:#2fb987;
+}
+.notice-write-area .write-bx label img {
+    display: inline-block;
+    margin-right: 7px;
+    width: 18px;
+    height: 16px;
+}
+.notice-write-area .write-bx label span {
+    color: #fff;
+    font-size: 0.875rem;
+    vertical-align: bottom;
+}
+.notice-write-area .write-bx .file-name {
+    margin-left: 15px;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 40px;
+}
+.notice-write-area .write-bx textarea {
+    padding: 20px;
+    width: 1150px;
+    height: 370px;
+    color: #666;
+    border: 1px solid #bbb;
+
+}
+.notice-write-area .list-btn-area {
+    margin-top: 30px;
+    font-size: 0;
+    text-align: center;
+}
+.notice-write-area .list-btn-area button {
+    width: 110px;
+    height: 45px;
+    color: #fff;
+    background-color: #2fb987;
+    border-radius: 10px;
+}
+.notice-write-area .list-btn-area .cancel {
+    margin-left: 10px;
+    background-color: #aaa;
+}
+/* 이용약관 */
+.term-of-service {
+    padding: 80px 0 150px;
+
+}
+.term-of-service h3 {
+    margin-bottom: 40px;
+    font-size: 2.18rem;
+
+}
+.term-of-service p {
+    color: #666;
+    font-size: 1rem;
+
+}
+/* 1:1문의 */
+.question-visual {
+    background-image: url(../img/question_visual_bg.jpg);
+}
+.question-area h3 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.question-area .service-area .service-list {
+    margin: 0;
+    padding: 50px 0 40px;
+    width: 310px;
+    height: 350px;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-width: 0;
+    border-radius: 10px;
+}
+.question-area .service-area .service-list:hover {
+    background-color: #fff;
+    color: #2fb987;
+    border: 1px solid #2fb987;
+    box-shadow: 3px 3px 12px 3px rgba(0,13,57,0.1);
+}
+.question-area .service-area .service-list:hover .go {
+    color: #fff;
+    font-weight: 600;
+    background-color: #2fb987;
+}
+.question-area .service-area .service-list+.service-list {
+    margin-left: 30px;
+}
+.question-area .service-area .service-list span {
+    margin-top: 20px;
+    display: inline-block;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.question-area .service-area .service-list img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.question-area .service-area .service-list .go {
+    display: block;
+    margin: 30px auto 0;
+    width: 120px;
+    height: 45px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 45px;
+    background-color: #aaa;
+    border-radius: 30px;
+}
+.question-area .caution {
+    margin-top: 80px;
+}
+.question-area .caution .title {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.question-area .caution span {
+    color: #666;
 }
 /* footer */
 footer {
@@ -896,3 +1235,14 @@ footer address .copyright {
     margin-top: 10px;
     color: #999;
 }
+
+@media (max-width:1440px) {
+    .visual header nav {
+        left: 20%;
+    }
+}
+@media (max-width:1280px) {
+    .visual header nav {
+        left: 10%;
+    }
+} 
