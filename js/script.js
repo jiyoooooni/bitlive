@@ -35,3 +35,24 @@
   $(document).ready(function() {
     $("#example1").emojioneArea();
   });
+
+
+// upbit
+
+  $('.upbit-area .sound').click(function(){
+    $(this).toggleClass('active');
+  });
+
+  $('.upbit-area .youtube-btn').click(function(){
+    $('#btn-text').toggleClass('active');
+  });
+
+  $('.upbit-area .b_point .point-btn').click(function(){
+    $('.upbit-area .b_point .point-btn').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $('.upbit-area .r_point .point-btn').click(function(){
+    $('.upbit-area .r_point .point-btn').removeClass('active');
+    $(this).addClass('active');
+  });
